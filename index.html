@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Neumorphism</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+<body>
+    <div class="container mt-5">
+        <h1 class="txt-drop text-center">Neumorphism</h1>
+        <div class="row mb-5">
+
+            <div class="col-md-4" data-skill_filter ="webdev">
+                <div class="canvas-wrap-skill" data-percent="80" data-color="orange">
+                    <canvas class="canvas-skill" width="300" height="300"></canvas>
+                    <span class="percent-skill"></span>
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle"></div>
+                    <div class="skill-lang"><div class="skill-name">HTML</div></div>
+                </div>
+            </div>
+        
+            <div class="col-md-4" data-skill_filter="webdev">
+                <div class="canvas-wrap-skill" data-percent="60" data-color="#00a1ff">
+                    <canvas class="canvas-skill" width="300" height="300"></canvas>
+                    <span class="percent-skill"></span>
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle"></div>
+                    <div class="skill-lang"><div class="skill-name">JavaScript</div></div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-skill_filter="webdev">
+                <div class="canvas-wrap-skill" data-percent="40" data-color="#ff04f3">
+                    <canvas class="canvas-skill" width="300" height="300"></canvas>
+                    <span class="percent-skill"></span>
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle"></div>
+                    <div class="skill-lang"><div class="skill-name">CSS</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="float-control">
+        
+        <input type="color" id="color-picker" value="#ff0000">
+        <i class="fa fa-eyedropper"></i>
+   
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
