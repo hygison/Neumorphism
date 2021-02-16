@@ -55,18 +55,22 @@ $(document).ready(function(){
     $(document).on('change','#color-picker',function(){
         //Colors is #hex
 
-        let newColor = $(this).val();
-        //let newColor = '#ccc';
-        let max = 15*16+15;
+        let newColor = $(this).val();//The background Color
+        
+        let max = 15*16+15;//Hex uses Base 16
         let min = 0*16+0;
 
-        let delta = 20;
-
+        let delta = 20; //Any value from 0 to 255, but would be better low values like 20 or the contrast would be too strong
+    
+        // #123456 
+        // a = 12
+        // b = 34
+        // c = 56
         let a;
         let b;
         let c;
-        console.log(newColor.length);
-
+        
+        // #ccc = #cccccc
         if((newColor.length)<5){
             a = newColor[1]+newColor[1];
             b = newColor[2]+newColor[2];
@@ -107,18 +111,6 @@ $(document).ready(function(){
         let lightColor ='#'+getHex((a-delta).toString(16))+getHex((b-delta).toString(16))+getHex((c-delta).toString(16));
         let darkColor ='#'+getHex((a+delta).toString(16))+getHex((b+delta).toString(16))+getHex((c+delta).toString(16));
         
-        
-     
-
-        /*
-        console.log(mainColor);
-        console.log('a= '+a.toString(16));
-        console.log('b= '+b.toString(16));
-        console.log('c= '+c.toString(16));
-        console.log('a= '+getHex(a.toString(16)));
-        console.log('b= '+getHex(b.toString(16)));
-        console.log('c= '+getHex(c.toString(16)));
-        */
 
         $('body').css("background",mainColor);
         $('.txt-drop').css("color",mainColor);
@@ -128,6 +120,7 @@ $(document).ready(function(){
     });
 
     function getHex(a){
+        //Just add a string '0' if the length is 1
         if(a.length < 2){
             return '0'+a;
         }else{
